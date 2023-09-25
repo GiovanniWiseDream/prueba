@@ -11,7 +11,7 @@ const Sphere = ({ texture, position }) => {
   }); // Crea un material con la textura
 
   return (
-    <mesh position={position}>
+    <mesh position={position} scale={[10, 10, 10]}>
       <sphereGeometry />
       <primitive object={material} attach="material" />
     </mesh>
