@@ -13,7 +13,9 @@ function App() {
         <color attach="background" args={["#242424"]} />
         <Sphere color="#ff0000" position={[0, 0, 0]} texture={texture}></Sphere>
         <InfoButton
-          color="#ff0000"
+          texture={
+            "https://cdn.vr-360-tour.com/files/email/60F1F846-D8FC-11E7-A6B7-AA2236531569.JPG"
+          }
           position={[
             -8.024638206901772, -2.8511884254256574, -5.116163559866413,
           ]}

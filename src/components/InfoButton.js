@@ -9,7 +9,7 @@ const InfoButton = ({ color, position, changeTexture }) => {
   return (
     <mesh position={position} scale={[0.5, 0.5, 0.5]} onClick={handleClick}>
       <sphereGeometry />
-      <meshStandardMaterial color={color} wireframe />
+      <meshStandardMaterial color={"#3f0632"} />
     </mesh>
   );
 };

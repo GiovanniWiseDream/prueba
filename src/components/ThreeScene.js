@@ -1,5 +1,5 @@
 import { Canvas, useThree } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
+import { OrbitControls, Stats } from "@react-three/drei";
 import { Raycaster, Vector2, MOUSE } from "three";
 import React, { useEffect } from "react";
 
@@ -38,7 +38,7 @@ const MouseRaycaster = () => {
     };
   }, [camera, scene]);
 
-  return null; 
+  return null;
 };
 
 const ThreeScene = ({ children }) => {
@@ -46,7 +46,8 @@ const ThreeScene = ({ children }) => {
     <Canvas camera={{ position: [0, 0, 0.01] }}>
       <MouseRaycaster />
       {children}
-      <OrbitControls enableDamping={true} />
+      <OrbitControls enableDamping={false} />
+      <Stats />
     </Canvas>
   );
 };
