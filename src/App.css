@@ -1,0 +1,6 @@
+/* App.css */
+
+.info-button {
+  position: absolute;
+  z-index: 1; /* Ajusta el valor según sea necesario para controlar la superposición */
+}

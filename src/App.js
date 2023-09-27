@@ -2,24 +2,27 @@ import ThreeScene from "./components/ThreeScene";
 import Sphere from "./components/Sphere";
 import InfoButton from "./components/InfoButton";
 import React, { useState } from "react";
+import Markers from "./components/Markers";
+import { useProgress } from "@react-three/drei";
 function App() {
-  const [texture, setTexture] = useState("/habitacion.jpg"); // Estado para la textura
+  const [texture, setTexture] = useState("/habitacion.jpg");
+  const [infoButtonVisible, setInfoButtonVisible] = useState(false);
+
   const changeTexture = (contact) => {
-    setTexture(contact); // Cambia la textura por la que desees aquí
+    setTexture(contact);
   };
+
   return (
     <div style={{ height: "100vh", overflow: "hidden" }}>
       <ThreeScene>
-        <color attach="background" args={["#242424"]} />
+        <color attach="background" args={["#ffffff"]} />
         <Sphere color="#ff0000" position={[0, 0, 0]} texture={texture}></Sphere>
         <InfoButton
-          texture={
-            "https://cdn.vr-360-tour.com/files/email/60F1F846-D8FC-11E7-A6B7-AA2236531569.JPG"
-          }
           position={[
-            -8.024638206901772, -2.8511884254256574, -5.116163559866413,
+            7.1310602310623565, -4.532619197703322, -4.373150995372805,
           ]}
-          changeTexture={changeTexture} // Pasa la función como prop
+          changeTexture={changeTexture}
+          wireframe
         />
         <ambientLight />
       </ThreeScene>

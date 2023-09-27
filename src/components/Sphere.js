@@ -1,6 +1,6 @@
 import React from "react";
 import { MeshBasicMaterial, TextureLoader, BackSide } from "three"; // Importa las clases necesarias de Three.js
-
+import InfoButton from "./InfoButton";
 const Sphere = ({ texture, position }) => {
   const textureLoader = new TextureLoader();
   const textureMap = textureLoader.load(texture); // Carga la textura desde el archivo
