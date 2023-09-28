@@ -21,7 +21,20 @@ function App() {
           position={[
             7.1310602310623565, -4.532619197703322, -4.373150995372805,
           ]}
+          rotationX={[0.5]}
+          rotationY={[-0.8]}
           changeTexture={changeTexture}
+          image={"/ovo.jpg"}
+          wireframe
+        />
+        <InfoButton
+          position={[
+            -7.231060231062356, -3.2326191977033227, -2.121345581163022,
+          ]}
+          rotationX={[1.0999999999999999]}
+          rotationY={[0.7999999999999999]}
+          changeTexture={changeTexture}
+          image={"/piscina.jpg"}
           wireframe
         />
         <ambientLight />

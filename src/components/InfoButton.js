@@ -2,15 +2,16 @@ import React, { useState, useRef, useEffect } from "react";
 import { useThree, useFrame } from "@react-three/fiber";
 import { Euler } from "three"; // Importa Euler de three
 
-const InfoButton = ({ color, position, changeTexture }) => {
+const InfoButton = ({ color, position, rotationX, rotationY, changeTexture, image }) => {
   const [isHovered, setIsHovered] = useState(false);
   const meshRef = useRef(); // Agregamos una referencia al mesh
   const { viewport } = useThree();
-  const initialRotation = new Euler(0.5, -0.8, 0, "XYZ");
+  console.log(rotationX)
+  const initialRotation = new Euler(rotationX, rotationY, 0, "XYZ");
 
   const handleClick = () => {
     console.log("aaaaaaaaa");
-    changeTexture("/ovo.jpg"); // Llama a la función para cambiar la textura
+    changeTexture(image); // Llama a la función para cambiar la textura
   };
 
   const handlePointerOver = () => {
