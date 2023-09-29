@@ -1,0 +1,34 @@
+{
+  "points": [
+    {
+      "id": 0,
+      "rotationX": 4.795599999999998,
+      "rotationY": -0.10000000000000009,
+      "position": [0.12715106356530892, -4.2975830014391345, 6.657354516461712],
+      "place": "1"
+    },
+    {
+      "id": 1,
+      "rotationX": 4.795599999999998,
+      "rotationY": -0.10040000000000007,
+      "position": [-6.902072192356865, -5.7422614164802885, 0.6634639134484912],
+      "place": "0"
+    },
+    {
+      "id": 2,
+      "rotationX": 4.795599999999998,
+      "rotationY": -0.10040000000000007,
+      "position": [6.982897811813104, -6.251934637707833, -1.039312903704649],
+      "place": "2"
+    }
+  ],
+  "places": [
+    { "id": 0, "image": "/Suite Premiere 209/1_CORREGIDA.jpg", "puntos": [0] },
+    {
+      "id": 1,
+      "image": "/Suite Premiere 209/3_CORREGIDA.jpg",
+      "puntos": [1, 2]
+    },
+    { "id": 2, "image": "/Suite Premiere 209/4_CORREGIDA.jpg", "puntos": [] }
+  ]
+}

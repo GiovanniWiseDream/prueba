@@ -2,18 +2,31 @@ import React, { useState, useRef, useEffect } from "react";
 import { useThree, useFrame } from "@react-three/fiber";
 import { Euler } from "three"; // Importa Euler de three
 
-const InfoButton = ({ color, position, rotationX, rotationY, changeTexture, image }) => {
+const InfoButton = ({
+  position,
+  rotationX,
+  rotationY,
+  changeTexture,
+  image,
+  changePlace,
+  place,
+}) => {
   const [isHovered, setIsHovered] = useState(false);
   const meshRef = useRef(); // Agregamos una referencia al mesh
   const { viewport } = useThree();
-  console.log(rotationX)
+  console.log(image);
   const initialRotation = new Euler(rotationX, rotationY, 0, "XYZ");
 
   const handleClick = () => {
     console.log("aaaaaaaaa");
     changeTexture(image); // Llama a la función para cambiar la textura
+    handleClick2();
   };
 
+  const handleClick2 = () => {
+    console.log("aaaaaaaaa");
+    changePlace(place);
+  };
   const handlePointerOver = () => {
     setIsHovered(true);
   };
@@ -25,9 +38,9 @@ const InfoButton = ({ color, position, rotationX, rotationY, changeTexture, imag
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.key === "w") {
-        meshRef.current.position.z += 0.01;
+        meshRef.current.position.z += 0.1;
       } else if (event.key === "s") {
-        meshRef.current.position.z -= 0.01;
+        meshRef.current.position.z -= 0.1;
       } else if (event.key === "a") {
         meshRef.current.position.x -= 0.1;
       } else if (event.key === "d") {
@@ -39,10 +52,13 @@ const InfoButton = ({ color, position, rotationX, rotationY, changeTexture, imag
       }
       //rotacion
       else if (event.key === "4") {
+        meshRef.current.rotation.y -= 0.0001;
         meshRef.current.rotation.y += 0.1;
       } else if (event.key === "6") {
         meshRef.current.rotation.y -= 0.1;
       } else if (event.key === "8") {
+        meshRef.current.rotation.x -= 0.0001;
+
         meshRef.current.rotation.x += 0.1;
       } else if (event.key === "2") {
         meshRef.current.rotation.x -= 0.1;
