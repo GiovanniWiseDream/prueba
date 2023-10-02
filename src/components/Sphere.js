@@ -4,6 +4,7 @@ import InfoButton from "./InfoButton";
 const Sphere = ({ texture, position }) => {
   const textureLoader = new TextureLoader();
   const textureMap = textureLoader.load(texture); // Carga la textura desde el archivo
+  console.log("cargado");
 
   const material = new MeshMatcapMaterial({
     map: textureMap,

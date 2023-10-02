@@ -17,9 +17,7 @@ function App() {
   const changeTexture = (contact) => {
     setTexture(contact);
   };
-  const handleClick = () => {
-    console.log("aaaaaaaaa");
-  };
+
   const point = data.points;
   const places = data.places;
   console.log(point[0]);
