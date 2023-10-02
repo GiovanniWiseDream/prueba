@@ -13,20 +13,14 @@ const InfoButton = ({
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const meshRef = useRef(); // Agregamos una referencia al mesh
-  const { viewport } = useThree();
-  console.log(image);
   const initialRotation = new Euler(rotationX, rotationY, 0, "XYZ");
 
   const handleClick = () => {
     console.log("aaaaaaaaa");
     changeTexture(image); // Llama a la función para cambiar la textura
-    handleClick2();
-  };
-
-  const handleClick2 = () => {
-    console.log("aaaaaaaaa");
     changePlace(place);
   };
+
   const handlePointerOver = () => {
     setIsHovered(true);
   };

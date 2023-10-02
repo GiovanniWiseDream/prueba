@@ -3,11 +3,11 @@ import Sphere from "./components/Sphere";
 import InfoButton from "./components/InfoButton";
 import React, { useState } from "react";
 import data from "./data/data.json"; // Ruta correcta al archivo JSON
-import { Environment } from "@react-three/drei";
-import { act } from "react-dom/test-utils";
 
 function App() {
-  const [texture, setTexture] = useState("/Suite Premiere 209/1_CORREGIDA.jpg");
+  const point = data.points;
+  const places = data.places;
+  const [texture, setTexture] = useState(places[0].image);
   const [actual, setActual] = useState(0); // Utilizar el estado para almacenar el valor actual
 
   const changePlace = (newActual) => {
@@ -18,9 +18,6 @@ function App() {
     setTexture(contact);
   };
 
-  const point = data.points;
-  const places = data.places;
-  console.log(point[0]);
   return (
     <div style={{ height: "100vh", overflow: "hidden" }}>
       <ThreeScene>
